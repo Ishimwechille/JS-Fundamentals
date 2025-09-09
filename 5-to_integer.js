@@ -1,11 +1,9 @@
-const languages = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-let i = 0;
-let result = '';
 
-while (i < languages.length) {
-  result += languages[i] + '\n';
-  i++;
+const arg = process.argv[2]; // Get the first argument
+const number = parseInt(arg); // Convert to integer
+
+if (isNaN(number)) {
+  console.log('Not a number');
+} else {
+  console.log(`My number: ${number}`);
 }
-
-// Remove the last extra newline using trim()
-console.log(result.trim());
